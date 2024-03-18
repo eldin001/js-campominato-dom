@@ -7,6 +7,17 @@ Ad esempio:
 Di cosa ho bisogno per generare i numeri?
 Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 Le validazioni e i controlli possiamo farli anche in un secondo momento. */
+// funzione per generare numeri randomici
+let isFound = false;
+let randomNumber ;
+while ( isFound === false){
+    randomNumber = getRandomInt(min,max);
+    if(blacklist.includes(randomNumber) ===false){
+        isFound = true;
+    }
+    return randomNumber;
+}
+
 
 //!questa funzione genererà 100 box nel mio main, all'interno c'è un altro event listner che attava il colore e il mesaggio in console.
 
