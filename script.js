@@ -7,16 +7,36 @@ Ad esempio:
 Di cosa ho bisogno per generare i numeri?
 Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 Le validazioni e i controlli possiamo farli anche in un secondo momento. */
-// funzione per generare numeri randomici
-let isFound = false;
+
+// funzione per generare numeri randomici che non si ripetono
+function generateUniqueRandomNumber (min, max, blacklist) {
+    let isFound = false;
 let randomNumber ;
 while ( isFound === false){
-    randomNumber = getRandomInt(min,max);
-    if(blacklist.includes(randomNumber) ===false){
+    randomNumber = getRndInteger(min,max);
+    if(blacklist.includes(randomNumber) === false){
         isFound = true;
     }
+    console.log(randomNumber);
     return randomNumber;
 }
+}
+for (let i = 0; i < 17; i++) {
+    let blacklist = [];
+    let uniqueNumber = generateUniqueRandomNumber(1, 16, blacklist)
+    
+    
+}
+
+
+// funzione numero randomico
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+
+
+
 
 
 //!questa funzione genererà 100 box nel mio main, all'interno c'è un altro event listner che attava il colore e il mesaggio in console.
@@ -34,7 +54,7 @@ function createBoxAndColor() {
                 mainElement.appendChild(newElement);
                 newElement.addEventListener('click', function() {
                 newElement.classList.add('colored-square');
-                console.log(i);
+                
             })
         }
         } else if (selectValue === 'difficult') {
@@ -45,7 +65,7 @@ function createBoxAndColor() {
                 mainElement.appendChild(newElement);
                 newElement.addEventListener('click', function() {
                 newElement.classList.add('colored-square');
-                console.log(i);
+                
                 })
             }
          } else {
@@ -56,7 +76,7 @@ function createBoxAndColor() {
                 mainElement.appendChild(newElement);
                 newElement.addEventListener('click', function() {
                 newElement.classList.add('colored-square');
-                console.log(i);
+                
                 })
             }
          }
