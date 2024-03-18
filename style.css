@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:antiquewhite;
+}
+
+#wrapper {
+    width: 500px;
+    margin: 10px auto;
+    color: cadetblue;
+}
+
+main {
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 163, 98);
+}
+
+#toolbar {
+    width: 500px;
+    margin: 5px auto;
+}
+
+.square {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid red;
+}
+
+.square-medium {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    border: 1px solid red;
+}
+
+.square-difficult{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    border: 1px solid red;
+}
+
+#button, select{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid green;
+    color: rgb(255, 0, 0);
+    font-size: larger;
+    background-color: aquamarine;
+}
+
+
+
+
+.colored-square {
+    background-color: lightblue;
+}
+
